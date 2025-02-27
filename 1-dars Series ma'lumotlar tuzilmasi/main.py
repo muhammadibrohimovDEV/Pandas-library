@@ -10,8 +10,11 @@ import numpy as np
 
 from pandas import Series # Series ni pandasdan import qilish
 
+# Series bu bir o'lchamli pandasdagi ma'lumotlar tuzilmasidir
+# U ikki narsadan iborat bo'ladi index va value (qiymat)
+# Seriesni odiiy python list(ro'yxat)dan farqi uning index larini biz o'zimiz berishimiz yoki o'zgartirishimiz mumkin
 
-# Seriesni ro'yxatdan farqi bu indexni hohlagan holimizda berishimiz mumkin
+
 obj = Series([1 , 2 , 3 , 4 , 5]) # Series ma'lumotlar tuzilmasini yaratish
 
 print(obj) # Seriesdagi ham indeks , ham qiymatlarni ko'rish
@@ -19,15 +22,22 @@ print(obj.values) # Seriesdagi faqatgina qiymatlarni ko'rish
 print(obj.index) # Seriesdagi faqatgina indekslarni ko'rish
 
 
-obj2 = Series([5 , 6 , 3.2 , -6.5] , index = ['a' , 'b' , 'c' , 'd']) # indekslarni o'zimiz bera olamiz
+# Indexlarni biz o'zimiz berishimiz , yaratishimiz , o'zgartirishimiz mumkin
+obj2 = Series([5 , 6 , 3.2 , -6.5] , index = ['a' , 'b' , 'c' , 'd'])
 print(obj2)
-print(obj2.values)
-print(obj2.index)
-print(obj2["a"]) # bir dona elemntni indeksi bilan chaqirish
-print(obj2[["a" , 'c' , 'd' , 'd']]) # bir nechta elementni quyidagi kabi chaqiriladi
 
-print(obj2[obj2 < 3]) # 2 dan katta qiymatdagi elemntlarni chiqarish
+# Faqat bir dona qiymatni indexi orqali chaqirish
+data = obj2['a']
 
-print(obj2*2) # onj2 har bir elementni 2 ga ko'paytirish
+# Bir nechta qiymatni index lari orqali chaqirish
+data2 = obj2[["a" , "d" , "c"]]
 
-print(np.exp(obj2))
+print(data , '\n' , data2)
+
+# Series qiymatlarini shart orqali chop etish mumkin
+data3 = obj[obj.values <= 3]
+print(data3)
+
+# Series qiymatlarini ma'lum bir songa ko'paytirish va bo'lish mumkin
+obj2 = obj2 * 3
+print(obj2)

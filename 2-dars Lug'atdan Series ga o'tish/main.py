@@ -25,10 +25,10 @@ print(cars1['toyota']) # kalit so'z boyicha chaqirish
 # yangi indekslarni yaratib olish
 models = ['honda' , 'mazda' , 'lacetti' , 'jaguar' , 'malibu' , 'toyota' , 'bmw' , 'mercedes']
 
+# yangi qo'shilgan indekslar NaN qiymatiga ega bo'ladi
 # mavjud lug'atni Seriesga o'girish va uni indekslarnini almashtirish
 cars2 = Series(cars_dict , index = models)
 
 print(cars_dict) # oddiy lug'at
 print(cars2) # indekslari o'zgargan Series
 
-# yangi qo'shilgan indekslar NaN qiymatiga ega bo'ladi

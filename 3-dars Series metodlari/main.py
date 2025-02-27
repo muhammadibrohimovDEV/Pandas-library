@@ -16,7 +16,7 @@ models = ['honda' , 'mazda' , 'lacetti' , 'jaguar' , 'malibu' , 'toyota' , 'bmw'
 
 cars = Series(cars_dict , index = models)
 
-print(cars.isnull()) # Agar NaN bo'lsa True qaytaradi , aks holda Flase qaytaradi.
+print(cars.isnull()) # Agar NaN bo'lsa True qaytaradi , aks holda False qaytaradi.
 
 print(cars.notnull()) # Agar NaN bo'lsa False qaytaradi , aks holda True qaytaradi
 cars1 = Series(cars_dict)
@@ -29,11 +29,9 @@ print(cars1 + cars) # pandas o'zi mos indeksdagi qiymatlar ustida matemetik amal
 
 cars.name = "Avtosalon" # butun boshli Seriesga nom berish
 
-cars.name = "Avtosalon" # butun boshli Seriesga nom berish
+print(cars.hasnans) # Butun boshli Seriesda NaN qiymatalr bormi yo'qmi bilib beradi
 
-print(cars.hasnans) # Butun boshli Seriesda NaN qiymatalr bormi yo'qmi bilib berai
-
-print(cars.dtype )# qiymatlarining ma'lumot turini ko'rsatadi
+print(cars.dtype)# qiymatlarining ma'lumot turini ko'rsatadi
 
 print(cars1.is_unique) # takrorlanmas qiymatlar bor bolsa True , takrorlansa Flase
 
