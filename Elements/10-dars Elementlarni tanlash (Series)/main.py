@@ -32,7 +32,7 @@ obj = pd.Series(np.arange(8.0) , index = ['a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'g
 print(obj[['a']])
 print(obj['a' : 'e']) # harf orqali ko'p oby'ektlarga olish
 
-obj['a' : 'c'] = 15 # oraliqga qiymat berish
+obj['a' : 'c'] = 15 # oraliqga qiymat ber
 print(obj)
 
 print(obj[obj<15]) # filtrla
