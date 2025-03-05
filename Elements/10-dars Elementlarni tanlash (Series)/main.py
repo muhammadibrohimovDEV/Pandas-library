@@ -35,5 +35,5 @@ print(obj['a' : 'e']) # harf orqali ko'p oby'ektlarga olish
 obj['a' : 'c'] = 15 # oraliqga qiymat berish
 print(obj)
 
-print(obj[obj<15]) # filtrlash
+print(obj[obj<15]) # filtrla
 
